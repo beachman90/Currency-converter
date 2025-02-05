@@ -18,26 +18,10 @@ namespace Currency_converter
 
             try
             {
-                using (var client = new HttpClient())
-                {
-                    var response = await client.GetStringAsync(
-                        "http://data.fixer.io/api/latest?access_key=1da4394e64da8f692a593dbaae306f28&symbols=" +
-                        fromCurrency + "," + toCurrency);
+                decimal result = await ConvertCurrency(fromCurrency, toCurrency, amount);
+                Console.WriteLine($"Result: {result:F2}");
 
-                    //Console.WriteLine(response); For å sjekke dataen som sendes fra api
 
-                    var data = JsonSerializer.Deserialize<CurrencyResponse>(response);
-                    
-                    if (data.success && data.rates != null)
-                    {
-                        decimal fraKurs = data.rates[fromCurrency];
-                        decimal tilKurs = data.rates[toCurrency];
-                        decimal resultat = amount * (tilKurs / fraKurs);
-                        Console.WriteLine($"resultat: {resultat:F2}");
-                    }
-                }
-                
-                
             } catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
@@ -45,6 +29,27 @@ namespace Currency_converter
             
 
             
+        }
+
+        static async Task<decimal> ConvertCurrency(string fromCurrency, string toCurrency, decimal amount)
+        {
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetStringAsync(
+                    "http://data.fixer.io/api/latest?access_key=1da4394e64da8f692a593dbaae306f28&symbols=" +
+                    fromCurrency + "," + toCurrency);      
+
+                var data = JsonSerializer.Deserialize<CurrencyResponse>(response);
+
+                if (data.success && data.rates != null)
+                {
+                    decimal fraKurs = data.rates[fromCurrency];
+                    decimal tilKurs = data.rates[toCurrency];
+                    return amount * (tilKurs / fraKurs);
+                }
+                throw new Exception("Could not convert.");
+            }
+
         }
     }
 
