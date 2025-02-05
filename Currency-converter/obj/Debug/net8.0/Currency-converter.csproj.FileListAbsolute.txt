@@ -1,0 +1,15 @@
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.AssemblyInfoInputs.cache
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.AssemblyInfo.cs
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.csproj.CoreCompileInputs.cache
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.sourcelink.json
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\bin\Debug\net8.0\Currency-converter.exe
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\bin\Debug\net8.0\Currency-converter.deps.json
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\bin\Debug\net8.0\Currency-converter.runtimeconfig.json
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\bin\Debug\net8.0\Currency-converter.dll
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\bin\Debug\net8.0\Currency-converter.pdb
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.dll
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\refint\Currency-converter.dll
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.pdb
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\Currency-converter.genruntimeconfig.cache
+C:\Users\jistr\source\repos\Currency-converter\Currency-converter\obj\Debug\net8.0\ref\Currency-converter.dll
