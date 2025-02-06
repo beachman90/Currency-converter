@@ -128,6 +128,4 @@ namespace Currency_converter
         public bool historical { get; set; }
         public Dictionary<string, decimal> rates { get; set; }
     }
-
-
 }
