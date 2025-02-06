@@ -12,4 +12,6 @@ namespace Currency_converter.Data
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=CurrencyDb;Trusted_Connection=True;");
         }
     }
+
+
 }

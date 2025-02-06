@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using Currency_converter.Data;
+using Currency_converter.Models;
+using System.Text.Json;
 
 namespace Currency_converter
 {
@@ -6,6 +8,23 @@ namespace Currency_converter
     {
         static async Task Main(string[] args)
         {
+
+            // Umiddelbar sjekk av lagrede rater
+
+            //await StoreDailyRates();
+            
+            //using (var context = new CurrencyContext())
+            //{
+            //    var storedRates = context.ExchangeRates.ToList();
+            //    Console.WriteLine("Lagrede valutakurser:");
+            //    foreach (var rate in storedRates)
+            //    {
+            //        Console.WriteLine($"Valuta: {rate.Currency}, Kurs: {rate.Rate}, Dato: {rate.Date}");
+            //    }
+            //}
+
+            
+            
             bool continueProgram = true;
             while (continueProgram) 
             {
@@ -70,7 +89,7 @@ namespace Currency_converter
                     Console.WriteLine();
             }
                 
-                
+              
 
             
             
@@ -119,13 +138,52 @@ namespace Currency_converter
 
         }
 
+        static async Task StoreDailyRates()
+        {
+            try 
+            {
+                using (var client = new HttpClient())
+                {
+                    var response = await client.GetStringAsync(
+                        $"http://data.fixer.io/api/latest?access_key=1da4394e64da8f692a593dbaae306f28&symbols={string.Join(",", CurrencyList.prioCurrencies)}");
+
+                    var data = JsonSerializer.Deserialize<CurrencyResponse>(response);
+                    
+                    if (data.success && data.rates != null)
+                    {
+                        using (var context = new CurrencyContext())
+                        {
+                            foreach (var currency in CurrencyList.prioCurrencies)
+                            {
+                                if (data.rates.TryGetValue(currency, out decimal rate))
+                                {
+                                    var exchangeRate = new ExchangeRate
+                                    {
+                                        Currency = currency,
+                                        Rate = rate,
+                                        Date = DateTime.UtcNow,
+                                    };
+
+                                    context.ExchangeRates.Add(exchangeRate);
+                                }
+                            }
+
+                            await context.SaveChangesAsync();
+                        }
+                    }
+                }
+            } catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                Console.WriteLine($"Detail: {ex.InnerException?.Message}");
+                Console.ReadLine();
+            }
+
+            
+        }
+
 
     }
 
-    class CurrencyResponse
-    {
-        public bool success { get; set; }
-        public bool historical { get; set; }
-        public Dictionary<string, decimal> rates { get; set; }
-    }
+    
 }
