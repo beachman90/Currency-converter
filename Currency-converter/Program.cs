@@ -11,24 +11,27 @@ namespace Currency_converter
         static async Task Main(string[] args)
         {
 
+            ICurrencyService currencyService = new CurrencyService();
+
             //Umiddelbar sjekk av lagrede rater
 
-            //await StoreDailyRates();
+            //await currencyService.StoreDailyRates();
 
-            // using (var context = new CurrencyContext())
-            // {
-            //     var storedRates = context.ExchangeRates.ToList();
-            //     Console.WriteLine("Lagrede valutakurser:");
-            //     foreach (var rate in storedRates)
-            //     {
-            //         Console.WriteLine($"Valuta: {rate.Currency}, Kurs: {rate.Rate}, Dato: {rate.Date}");
-            //     }
-            // }
+            //using (var context = new CurrencyContext())
+            //{
+            //    var storedRates = context.ExchangeRates.ToList();
+            //    Console.WriteLine("Lagrede valutakurser:");
+            //    foreach (var rate in storedRates)
+            //    {
+            //        Console.WriteLine($"Valuta: {rate.Currency}, Kurs: {rate.Rate}, Dato: {rate.Date}");
+            //    }
+            //}
 
 
             bool continueProgram = true;
             while (continueProgram)
             {
+
 
                 Console.WriteLine("Convert currency");
                 Console.WriteLine(new string('-', 20));
@@ -60,7 +63,7 @@ namespace Currency_converter
                         }
                         else
                         {
-                            decimal result = await CurrencyService.ConvertCurrencyHistorical(date, fromCurrency, toCurrency, amount);
+                            decimal result = await currencyService.ConvertCurrencyHistorical(date, fromCurrency, toCurrency, amount);
                             Console.WriteLine($"Result: {result:F2}");
                         }
                     }
@@ -74,7 +77,7 @@ namespace Currency_converter
                 {
                     try
                     {
-                        decimal result = await CurrencyService.ConvertCurrency(fromCurrency, toCurrency, amount);
+                        decimal result = await currencyService.ConvertCurrency(fromCurrency, toCurrency, amount);
                         Console.WriteLine($"Result: {result:F2}");
                     }
                     catch (Exception ex)
@@ -90,22 +93,8 @@ namespace Currency_converter
                     Console.WriteLine();
             }
 
-
-
-
-
-
-
-        }
-
-        
-
-       
-
-        
-
+        }                     
 
     }
-
     
 }

@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace Currency_converter.Services
 {
-    public class CurrencyService
+    public class CurrencyService : ICurrencyService
     {
 
         /// <summary>
         /// Takes ten prio currencies, shows daily rate relative to EUR and saves it to db once a day.
         /// </summary>
         /// <returns></returns>
-        public static async Task StoreDailyRates()
+        public async Task StoreDailyRates()
         {
             try
             {
@@ -61,7 +61,7 @@ namespace Currency_converter.Services
         }
 
 
-        public static async Task<decimal> ConvertCurrency(string fromCurrency, string toCurrency, decimal amount)
+        public async Task<decimal> ConvertCurrency(string fromCurrency, string toCurrency, decimal amount)
         {
 
             if (string.IsNullOrWhiteSpace(fromCurrency) || string.IsNullOrWhiteSpace(toCurrency))
@@ -89,7 +89,7 @@ namespace Currency_converter.Services
 
         }
 
-        public static async Task<decimal> ConvertCurrencyHistorical(DateTime date, string fromCurrency, string toCurrency, decimal amount)
+        public async Task<decimal> ConvertCurrencyHistorical(DateTime date, string fromCurrency, string toCurrency, decimal amount)
         {
             using (HttpClient client = new())
             {
