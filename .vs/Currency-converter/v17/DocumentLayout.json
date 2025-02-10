@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jistr\\source\\repos\\Currency-converter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B616C167-C767-440A-880A-B12A7728689D}|Currency-converter-api\\Currency-converter-api.csproj|c:\\users\\jistr\\source\\repos\\currency-converter\\currency-converter-api\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B616C167-C767-440A-880A-B12A7728689D}|Currency-converter-api\\Currency-converter-api.csproj|solutionrelative:currency-converter-api\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1396165-001A-454A-A47F-CA1237DF68D4}|Currency-converter\\Currency-converter.csproj|c:\\users\\jistr\\source\\repos\\currency-converter\\currency-converter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1396165-001A-454A-A47F-CA1237DF68D4}|Currency-converter\\Currency-converter.csproj|solutionrelative:currency-converter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1396165-001A-454A-A47F-CA1237DF68D4}|Currency-converter\\Currency-converter.csproj|c:\\users\\jistr\\source\\repos\\currency-converter\\currency-converter\\services\\currencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1396165-001A-454A-A47F-CA1237DF68D4}|Currency-converter\\Currency-converter.csproj|solutionrelative:currency-converter\\services\\currencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jistr\\source\\repos\\Currency-converter\\Currency-converter\\Program.cs",
+              "RelativeDocumentMoniker": "Currency-converter\\Program.cs",
+              "ToolTip": "C:\\Users\\jistr\\source\\repos\\Currency-converter\\Currency-converter\\Program.cs",
+              "RelativeToolTip": "Currency-converter\\Program.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T18:17:02.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CurrencyService.cs",
+              "DocumentMoniker": "C:\\Users\\jistr\\source\\repos\\Currency-converter\\Currency-converter\\Services\\CurrencyService.cs",
+              "RelativeDocumentMoniker": "Currency-converter\\Services\\CurrencyService.cs",
+              "ToolTip": "C:\\Users\\jistr\\source\\repos\\Currency-converter\\Currency-converter\\Services\\CurrencyService.cs",
+              "RelativeToolTip": "Currency-converter\\Services\\CurrencyService.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T18:16:00.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CurrencyController.cs",
+              "DocumentMoniker": "C:\\Users\\jistr\\source\\repos\\Currency-converter\\Currency-converter-api\\Controllers\\CurrencyController.cs",
+              "RelativeDocumentMoniker": "Currency-converter-api\\Controllers\\CurrencyController.cs",
+              "ToolTip": "C:\\Users\\jistr\\source\\repos\\Currency-converter\\Currency-converter-api\\Controllers\\CurrencyController.cs",
+              "RelativeToolTip": "Currency-converter-api\\Controllers\\CurrencyController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBcAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T18:15:32.447Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

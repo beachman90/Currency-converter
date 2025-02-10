@@ -1,0 +1,19 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.rsuser
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
