@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Currency-converter", "Curre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Currency_converter.Tests", "Currency_converter.Tests\Currency_converter.Tests.csproj", "{E038A77C-5F3C-4255-8459-085188ED2860}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Currency-converter-api", "Currency-converter-api\Currency-converter-api.csproj", "{B616C167-C767-440A-880A-B12A7728689D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Currency-converter-api", "Currency-converter-api\Currency-converter-api.csproj", "{B616C167-C767-440A-880A-B12A7728689D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D5253D0D-9B5F-4280-9F6C-6EFD1E44D551}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
